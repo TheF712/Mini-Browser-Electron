@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Browser</title>
+  <link rel="stylesheet" href="mini_browser.css">
+</head>
+<body>
+  <div id="browser-container">
+    <div id="browser-toolbar">
+      <div id="control-buttons">
+        <button id="back-button" title="Atrás">◀</button>
+        <button id="forward-button" title="Adelante">▶</button>
+        <button id="refresh-button" title="Actualizar">⟳</button>
+      </div>
+      <div id="address-bar-container">
+        <input type="text" id="address-bar" placeholder="Ingresa una URL...">
+        <button id="go-button" title="Ir">➔</button>
+      </div>
+      <div id="window-controls">
+        <button id="close-button" title="Cerrar">✕</button>
+      </div>
+    </div>
+    
+    <!-- Contenedor de pestañas -->
+    <div id="tabs-container">
+      <div class="add-tab-button" id="add-tab-button">+</div>
+    </div>
+    
+    <div id="browser-content">
+      <!-- Los webviews se añadirán dinámicamente aquí -->
+    </div>
+  </div>
+  
+  <div id="keyboard-shortcuts" class="tooltip">
+    <span>Ctrl+⇧+E para mostrar/ocultar</span>
+  </div>
+  
+  <script src="mini_browser_renderer.js"></script>
+</body>
+</html>

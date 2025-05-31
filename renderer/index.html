@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Browser</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    
+    .container {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 80%;
+    }
+    
+    h1 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    
+    .button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px 5px;
+    }
+    
+    .button:hover {
+      background-color: #2980b9;
+    }
+    
+    .button.danger {
+      background-color: #e74c3c;
+    }
+    
+    .button.danger:hover {
+      background-color: #c0392b;
+    }
+    
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .shortcut {
+      background-color: #f8f9fa;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-family: monospace;
+      margin: 5px 0;
+      display: inline-block;
+      font-weight: bold;
+    }
+    
+    .info {
+      margin-top: 20px;
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+    
+    .current-url {
+      margin-top: 20px;
+      font-style: italic;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mini Browser</h1>
+    <p>Haz clic en el botón para abrir el mini navegador o usa el atajo de teclado</p>
+    
+    <div class="buttons-container">
+      <button id="openBrowser" class="button">Abrir Mini Navegador</button>
+      <button id="quitApp" class="button danger">Cerrar Aplicación</button>
+    </div>
+    
+    <p>Atajo de teclado: <span class="shortcut" id="shortcutText">Ctrl+Shift+E</span></p>
+    
+    <div class="info">
+      Puedes arrastrar la ventana del mini navegador y redimensionarla
+    </div>
+    
+    <div class="current-url" id="currentUrl">
+      No hay navegación activa
+    </div>
+  </div>
+  
+  <script src="main_renderer.js"></script>
+</body>
+</html>
